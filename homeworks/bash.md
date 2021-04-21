@@ -1,0 +1,68 @@
+### Домашнее задание к занятию "4.1. Командная оболочка Bash: Практические навыки"
+
+### 1.
+
+```bash
+$ a=1
+$ b=2
+$ c=a+b
+$ echo $c
+a+b
+$ d=$a+$b
+$ echo $d
+1+2
+$ e=$(($a+$b))
+$ echo $e
+3
+```
+
+### 2.
+```bash
+while (( 1==1 ))
+do
+  curl https://localhost:4757
+  if (($? != 0))
+  then
+  date >> curl.log
+  fi
+done
+```
+
+Надо добавить по-моему вторую круглую скобку (И убедиться, что htttps c localhost запустится).
+
+### 3.
+```bash
+ips=('192.168.0.1:8080' '173.194.222.113:8080' '87.250.250.242:8080')
+
+for ip in "${ips[@]}"; do
+  i="0"
+  while [ $i -lt 5 ]; do
+    curl -I "$ip" >> curl.log
+    i=$[$i+1]
+  done
+done
+```
+
+### 4.
+```bash
+ips=('127.0.0.1:8080' '127.0.0.1:5000' '127.0.0.1:8080')
+
+for ip in "${ips[@]}"; do
+  i="0"
+  while [ $i -lt 5 ]; do
+    output=$(curl -I "$ip" 2>&1)
+    if (($? == 0))
+    then
+        echo $output >> curl.log
+    else
+        echo $output >> error.log
+        break
+    fi
+    i=$[$i+1]
+  done
+done
+```
+
+
+
+
