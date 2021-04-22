@@ -21,12 +21,6 @@ WantedBy=multi-user.target
 
 `sudo systemctl enable node_exporter`
 
-
-Добавление опций к запускаемому процессу через внешний файл:
-
-From https://github.com/prometheus/node_exporter
-![image info](images/os/task1.png)
-
 ####2. Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
 cpu - exposes CPU statistics
 
@@ -42,7 +36,8 @@ netstat - exposes network statistics from /proc/net/netstat
 
 
 ####3. Ознакомьтесь с метриками, которые по умолчанию собираются Netdata и с комментариями, которые даны к этим метрикам.
-
+![image info](images/os/task3.png)
+Сбоку указаны категории, по которым собираются метрики, они разбиты по группам.
 
 ####4. Можно ли по выводу dmesg понять, осознает ли ОС, что загружена не на настоящем оборудовании, а на системе виртуализации?
 Да:
