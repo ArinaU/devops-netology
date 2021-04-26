@@ -21,6 +21,21 @@ WantedBy=multi-user.target
 
 `sudo systemctl enable node_exporter`
 
+Возможность добавления опций к запускаемому процессу через внешний файл:
+
+Можно заранее флаги указать в отдельном файле:
+
+```bash
+ARG1=-o
+ARG2=--verbose
+```
+
+В .service написать:
+```bash
+EnvironmentFile=/etc/.argconf
+ExecStart=/usr/bin/prog $ARG1 $ARG2
+```
+
 ####2. Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
 cpu - exposes CPU statistics
 
