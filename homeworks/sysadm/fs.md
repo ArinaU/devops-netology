@@ -9,35 +9,35 @@
 
 
 ####4. Используя fdisk, разбейте первый диск на 2 раздела: 2 Гб, оставшееся пространство.
-![image info](images/fs/task4.png)
+![image info](../images/sysadm/fs/task4.png)
 
 
 ####5. Используя sfdisk, перенесите данную таблицу разделов на второй диск.
-![image info](images/fs/task5.png)
+![image info](../images/sysadm/fs/task5.png)
 
 
 ####6. Соберите mdadm RAID1 на паре разделов 2 Гб.
-![image info](images/fs/task6.png)
+![image info](../images/sysadm/fs/task6.png)
 
 
 ####7. Соберите mdadm RAID0 на второй паре маленьких разделов.
-![image info](images/fs/task7.png)
+![image info](../images/sysadm/fs/task7.png)
 
 
 ####8. Создайте 2 независимых PV на получившихся md-устройствах.
-![image info](images/fs/task8.png)
+![image info](../images/sysadm/fs/task8.png)
 
 
 ####9. Создайте общую volume-group на этих двух PV.
-![image info](images/fs/task9.png)
+![image info](../images/sysadm/fs/task9.png)
 
 
 ####10. Создайте LV размером 100 Мб, указав его расположение на PV с RAID0.
-![image info](images/fs/task10.png)
+![image info](../images/sysadm/fs/task10.png)
 
 
 ####11. Создайте mkfs.ext4 ФС на получившемся LV.
-![image info](images/fs/task11.png)
+![image info](../images/sysadm/fs/task11.png)
 
 
 ####12. Смонтируйте этот раздел в любую директорию, например, /tmp/new.
@@ -45,19 +45,19 @@
 
 
 ####13. Поместите туда тестовый файл, например wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz.
-![image info](images/fs/task13.png)
+![image info](../images/sysadm/fs/task13.png)
 
 
 ####14. Прикрепите вывод lsblk.
-![image info](images/fs/task14.png)
+![image info](../images/sysadm/fs/task14.png)
 
 
 ####15. Протестируйте целостность файла:
-![image info](images/fs/task15.png)
+![image info](../images/sysadm/fs/task15.png)
 
 
 ####16. Протестируйте целостность файла:
-![image info](images/fs/task15.png)
+![image info](../images/sysadm/fs/task15.png)
 
 
 ####17. Сделайте --fail на устройство в вашем RAID1 md.
@@ -65,10 +65,10 @@
 
 
 ####18. Подтвердите выводом dmesg, что RAID1 работает в деградированном состоянии.
-![image info](images/fs/task18.png)
+![image info](../images/sysadm/fs/task18.png)
 
 
 ####19. Протестируйте целостность файла, несмотря на "сбойный" диск он должен продолжать быть доступен:
-![image info](images/fs/task19.png)
+![image info](../images/sysadm/fs/task19.png)
 
 

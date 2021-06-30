@@ -1,21 +1,21 @@
 ####3. 
-![image info](images/security/pki.png)
+![image info](../images/sysadm/security/pki.png)
 
 ####4. 
-![image info](images/security/pki_int.png)
+![image info](../images/sysadm/security/pki_int.png)
 
 ####5&6.
 Конфиг для localhost:
-![image info](images/security/conf.png)
+![image info](../images/sysadm/security/conf.png)
 
 Конфиг для ssl:
-![image info](images/security/ssl_conf.png)
+![image info](../images/sysadm/security/ssl_conf.png)
 
 /etc/hosts:
-![image info](images/security/etc_hosts.png)
+![image info](../images/sysadm/security/etc_hosts.png)
 
 Результат:
-![image info](images/security/result.png)
+![image info](../images/sysadm/security/result.png)
 
 ####7.
 Автоматизированная среда управления сертификатами (ACME) - это стандартный протокол для автоматизации проверки домена, установки и управления сертификатами X.509. 
