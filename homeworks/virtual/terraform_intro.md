@@ -1,4 +1,4 @@
-### Домашнее задание к занятию "7.1. Инфраструктура как код"
+# Домашнее задание к занятию "7.1. Инфраструктура как код"
 
 https://github.com/netology-code/virt-homeworks/tree/master/07-terraform-01-intro
 
