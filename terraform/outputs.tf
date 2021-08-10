@@ -10,10 +10,22 @@ output "instance_region" {
   value = data.aws_region.current
 }
 
-output "instance_ip_addr" {
-  value = aws_instance.web.private_ip
+output "count_instances_ip_addr" {
+  value = [for device in aws_instance.count_web.* : device.*.private_ip]
 }
 
-output "instance_subnet_id" {
-  value = aws_instance.web.subnet_id
+output "for_each_instances_ip_addr" {
+  value = values(aws_instance.for_each_web)[*].private_ip
 }
+
+//output "for_each_instances_ip_addr" {
+//  value = [for device in aws_instance.for_each_web.* : device.*.arn]
+//}
+
+//output "count_instance_subnet_id" {
+//  value = formatlist("%v", aws_instance.count_web.*.subnet_id)
+//}
+
+//output "for_each_instance_subnet_id" {
+//  value = formatlist("%v", aws_instance.for_each_web.*.subnet_id)
+//}
